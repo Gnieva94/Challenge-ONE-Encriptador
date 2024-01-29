@@ -3,13 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">nk
+    <meta name="author" content="Nieva Gustavo Fabian, @gnievassj">
+    <meta name="description" content="Encriptador Challenge 1 ONE Alura Latam">
+    <meta name="keywords" content="Encriptador, ONE, Alura Latam">
+    <meta name="copyright" content="NievaDev 2023">
+     <!-- ROBOTS -->
+     <meta name="robots" content="index follow">
+     <!-- FACEBOOK -->
+     <meta property="og:title" content="Encriptador de Texto | ONE Alura Latam">
+     <meta property="og:description" content="Encriptador de texto para el Challenge 1 de ONE Alura Latam">
+     <meta property="og:type" content="Page">
+     <meta property="og:image" content="https://gnieva94.github.io/Challenge-ONE-Encriptador/img/logoAlura.svg">
+     <meta property="og:url" content="https://gnieva94.github.io/Challenge-ONE-Encriptador">
+     <!-- TWITTER -->
+     <meta property="twitter:title" content="Encriptador de Texto | ONE Alura Latam">
+     <meta property="twitter:description" content="Encriptador de texto para el Challenge 1 de ONE Alura Latam">
+     <meta property="twitter:type" content="Page">
+     <meta property="twitter:image" content="https://gnieva94.github.io/Challenge-ONE-Encriptador/img/logoAlura.svg">
+     <meta property="twitter:url" content="https://gnieva94.github.io/Challenge-ONE-Encriptador">
+    <link rel="shortcut icon" href="./img/logoAlura.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Encriptador | ONE</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <img src="./img/logoAlura.svg" alt="Logo de la página con forma de A minúscula">
+    </header>
+    <main>
+        <section class="section_principal">
+            <textarea oninput="auto_grow(this)" name="inputPrincipal" id="inputPrincipal" cols="30" placeholder="Ingrese el texto aqui"></textarea>
+            <small class="aclaracion">Solo letras minúsculas y sin acentos</small>
+            <div class="btn_container">
+                <button type="button" class="btn btn_primary" id="btnEncriptar">Encriptar</button>
+                <button type="button" class="btn btn_secondary" id="btnDesencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="section_secundaria">
+            <div class="inicial_container" id="containerInicial">
+                <h2 class="inicial_title">Ningún mensaje fue encontrado</h2>
+                <p class="inicial_paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="result_container" id="containerResult">
+                <textarea readonly name="resultado" id="resultado" cols="30"></textarea>
+                <button type="button" id="btnCopiar" class="btn btn_secondary">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Copyright <span id="fecha"></span></p>
+    </footer>
     <script src="./script/main.js"></script>
 </body>
 </html>
