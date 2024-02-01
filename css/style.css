@@ -54,7 +54,7 @@ textarea:focus{
 #inputPrincipal{
     background-color: transparent;
     color: darkblue;
-    min-height: 250px;
+    min-height: 150px;
     margin-top: 32px;
 }
 .aclaracion{

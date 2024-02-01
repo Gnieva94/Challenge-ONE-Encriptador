@@ -17,6 +17,7 @@ function auto_grow(element){
 const copiar = async ()=>{
     await navigator.clipboard.writeText(resultado.value);
     resultado.value = ''
+    resultado.style.height = '50px'
 }
 
 const ocultarPaneles = (contenido=false)=>{
@@ -52,6 +53,7 @@ const preAccion = (desencriptar=false)=>{
         ocultarPaneles()
     }
     inputPrincipal.value = ''
+    inputPrincipal.style.height = '150px'
 }
 
 btnEncriptar.addEventListener('click', ()=>{
