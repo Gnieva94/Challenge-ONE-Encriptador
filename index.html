@@ -32,19 +32,24 @@
     <main>
         <section class="section_principal">
             <textarea oninput="auto_grow(this)" name="inputPrincipal" id="inputPrincipal" cols="30" placeholder="Ingrese el texto aqui"></textarea>
-            <small class="aclaracion">Solo letras minúsculas y sin acentos</small>
-            <div class="btn_container">
-                <button type="button" class="btn btn_primary" id="btnEncriptar">Encriptar</button>
-                <button type="button" class="btn btn_secondary" id="btnDesencriptar">Desencriptar</button>
+            <div>
+                <small class="aclaracion">Solo letras minúsculas y sin acentos</small>
+                <div class="btn_container">
+                    <button type="button" class="btn btn_primary" id="btnEncriptar">Encriptar</button>
+                    <button type="button" class="btn btn_secondary" id="btnDesencriptar">Desencriptar</button>
+                </div>
             </div>
         </section>
         <section class="section_secundaria">
             <div class="inicial_container" id="containerInicial">
+                <div class="pic_doll"></div>
                 <h2 class="inicial_title">Ningún mensaje fue encontrado</h2>
                 <p class="inicial_paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
             <div class="result_container" id="containerResult">
-                <textarea readonly name="resultado" id="resultado" cols="30" title="resultado"></textarea>
+                <div>
+                    <p id="resultado"></p>
+                </div>
                 <button type="button" id="btnCopiar" class="btn btn_secondary">Copiar</button>
             </div>
         </section>
