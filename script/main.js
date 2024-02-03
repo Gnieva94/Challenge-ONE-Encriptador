@@ -10,14 +10,15 @@ const fecha = document.getElementById('fecha')
 fecha.innerHTML = new Date().getFullYear()
 
 function auto_grow(element){
-    element.style.height = '5px'
+    element.style.height = '100%'
     element.style.height = (element.scrollHeight) + 'px';
 }
 
 const copiar = async ()=>{
-    await navigator.clipboard.writeText(resultado.value);
-    resultado.value = ''
-    resultado.style.height = '50px'
+    if(resultado.value != ''){
+        await navigator.clipboard.writeText(resultado.innerHTML);
+        resultado.innerHTML = ''
+    }
 }
 
 const ocultarPaneles = (contenido=false)=>{
@@ -45,15 +46,14 @@ const accion = (string,desencriptar)=>{
 const preAccion = (desencriptar=false)=>{
     const inputPrincipal = document.getElementById('inputPrincipal')
     if(inputPrincipal.value != ''){
-        resultado.value = accion(inputPrincipal.value,desencriptar)
-        auto_grow(resultado)
+        resultado.innerHTML = accion(inputPrincipal.value,desencriptar)
         ocultarPaneles(true)
     }
     else{
         ocultarPaneles()
     }
     inputPrincipal.value = ''
-    inputPrincipal.style.height = '150px'
+    inputPrincipal.style.height = '100%'
 }
 
 btnEncriptar.addEventListener('click', ()=>{
